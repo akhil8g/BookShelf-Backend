@@ -139,7 +139,6 @@ module.exports = {
     readBook,
     readSpecificBook,
     createBook,
-    updateBook,
     deleteBook,
     readWishlist,
     addToWishlist,
