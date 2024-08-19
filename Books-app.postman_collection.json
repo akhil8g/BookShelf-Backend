@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "1291a71a-7dea-40a8-a3c4-0367057ec133",
+		"name": "Books-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37731227"
+	},
+	"item": [
+		{
+			"name": "Read All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://book-shelf-backend-seven.vercel.app/api/v1/bookRoutes/readBook",
+					"protocol": "https",
+					"host": [
+						"book-shelf-backend-seven",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"bookRoutes",
+						"readBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Specific Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://book-shelf-backend-seven.vercel.app/api/v1/bookRoutes/readSpecificBook/Harry Potter",
+					"protocol": "https",
+					"host": [
+						"book-shelf-backend-seven",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"bookRoutes",
+						"readSpecificBook",
+						"Harry Potter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \n            \"key\": \"/works/OL17930368W\",\n            \"title\": \"Atomic Habits\",\n            \"author_name\": [\n                \"James Clear\"\n            ],\n            \"cover_i\": \"12539702\",\n            \"__v\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://book-shelf-backend-seven.vercel.app/api/v1/bookRoutes/createBook",
+					"protocol": "https",
+					"host": [
+						"book-shelf-backend-seven",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"bookRoutes",
+						"createBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://book-shelf-backend-seven.vercel.app/api/v1/bookRoutes/deleteBook/66c350efc71ff0660f7b6cd9",
+					"protocol": "https",
+					"host": [
+						"book-shelf-backend-seven",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"bookRoutes",
+						"deleteBook",
+						"66c350efc71ff0660f7b6cd9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to Favourites",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\": \"66c1ffaf70caed136997d87d\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/bookRoutes/addToWishlist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"bookRoutes",
+						"addToWishlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read Favourites",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
