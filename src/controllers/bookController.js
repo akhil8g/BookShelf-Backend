@@ -48,29 +48,7 @@ const createBook = async(req,res)=>{
       }
 }
 
-const updateBook = (req,res)=>{
-    try {
 
-        let id =req.params.id;
-        let updatedFields = req.body;
-        console.log(updatedFields,id);
-        const data = fs.readFileSync('./src/books.json', "utf8");
-      let books = JSON.parse(data);
-    
-      for (let i = 0; i < books.length; i++) {
-        if (books[i].id == id) {
-          books[i] = { ...books[i], ...updatedFields };
-          break;
-        }
-      }
-      console.log(books);
-    
-      fs.writeFileSync('./src/books.json', JSON.stringify(books));
-        res.status(200).json({ "data": "", "msg": "Book updated", "err": ""});
-      } catch (err) {
-        res.status(500).json({ "data": book, "msg": "", "err": err.message});
-      }
-}
 
 const deleteBook = async (req, res) => {
   try {
