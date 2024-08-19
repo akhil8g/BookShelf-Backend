@@ -12,10 +12,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://book-shelf-backend-seven.vercel.app/api/v1/bookRoutes/readBook",
+					"raw": "https://book-shelf-server-theta.vercel.app/api/v1/bookRoutes/readBook",
 					"protocol": "https",
 					"host": [
-						"book-shelf-backend-seven",
+						"book-shelf-server-theta",
 						"vercel",
 						"app"
 					],
@@ -35,10 +35,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://book-shelf-backend-seven.vercel.app/api/v1/bookRoutes/readSpecificBook/Harry Potter",
+					"raw": "https://book-shelf-server-theta.vercel.app/api/v1/bookRoutes/readSpecificBook/Harry Potter",
 					"protocol": "https",
 					"host": [
-						"book-shelf-backend-seven",
+						"book-shelf-server-theta",
 						"vercel",
 						"app"
 					],
@@ -68,10 +68,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://book-shelf-backend-seven.vercel.app/api/v1/bookRoutes/createBook",
+					"raw": "https://book-shelf-server-theta.vercel.app/api/v1/bookRoutes/createBook",
 					"protocol": "https",
 					"host": [
-						"book-shelf-backend-seven",
+						"book-shelf-server-theta",
 						"vercel",
 						"app"
 					],
@@ -91,10 +91,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://book-shelf-backend-seven.vercel.app/api/v1/bookRoutes/deleteBook/66c350efc71ff0660f7b6cd9",
+					"raw": "https://book-shelf-server-theta.vercel.app/api/v1/bookRoutes/deleteBook/66c350efc71ff0660f7b6cd9",
 					"protocol": "https",
 					"host": [
-						"book-shelf-backend-seven",
+						"book-shelf-server-theta",
 						"vercel",
 						"app"
 					],
@@ -116,7 +116,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"bookId\": \"66c1ffaf70caed136997d87d\"\n}",
+					"raw": "{\n    \"bookId\": \"66c350e7c71ff0660f7b6cd7\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -124,12 +124,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/api/v1/bookRoutes/addToWishlist",
-					"protocol": "http",
+					"raw": "https://book-shelf-server-theta.vercel.app/api/v1/bookRoutes/addToWishlist",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"book-shelf-server-theta",
+						"vercel",
+						"app"
 					],
-					"port": "4000",
 					"path": [
 						"api",
 						"v1",
@@ -142,17 +143,69 @@
 		},
 		{
 			"name": "read Favourites",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://book-shelf-server-theta.vercel.app/api/v1/bookRoutes/readWishlist",
+					"protocol": "https",
+					"host": [
+						"book-shelf-server-theta",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"bookRoutes",
+						"readWishlist"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "remove from favourites",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://book-shelf-server-theta.vercel.app/api/v1/bookRoutes/removeWishlist/66c33b8509f18aba36e85848",
+					"protocol": "https",
+					"host": [
+						"book-shelf-server-theta",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"v1",
+						"bookRoutes",
+						"removeWishlist",
+						"66c33b8509f18aba36e85848"
+					]
+				}
 			},
 			"response": []
 		}
